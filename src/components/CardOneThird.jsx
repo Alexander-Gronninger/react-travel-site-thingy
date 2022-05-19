@@ -1,10 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
-import CardCategory from "./CardCategory";
+/* import CardCategory from "./CardCategory";
 import CardHeading from "./CardHeading";
-import CardText from "./CardText";
+import CardText from "./CardText"; */
 
-const CardOneThird = (props) => {
+const CardOneThird = ({ props, CardCategory, CardHeading, CardText }) => {
   console.log(props);
   const style = {
     CardOneThird: css`
@@ -15,9 +15,9 @@ const CardOneThird = (props) => {
   return (
     <>
       <article css={style.CardOneThird}>
-        <CardCategory CardCategoryContent="CATEGORY" />
-        <CardHeading CardHeadingContent="HEADING" />
-        <CardText CardTextContent="TEXT" CardTextColor={props.CardTextColor} />
+        {CardCategory}
+        {CardHeading}
+        {CardText}
       </article>
     </>
   );

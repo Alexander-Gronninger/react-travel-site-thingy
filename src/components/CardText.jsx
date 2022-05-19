@@ -2,15 +2,16 @@
 import { css } from "@emotion/react";
 
 const CardText = (props) => {
-  console.log("her:" + props);
+  console.log(props);
   const styles = {
     CardText: css`
-      color: ${props.color || "black"};
+      /* color: ${props.color || "black"}; */
     `,
   };
   return (
     <>
-      <p css={styles.CardText}>{props.CardTextContent}</p>
+      <p>CARDTEXT TEST</p>
+      {/* <p css={styles.CardText}>{props.CardTextContent}</p> */}
     </>
   );
 };
