@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 
-const CardOneThird = ({
+const CardTwoThirds = ({
   props,
   CardCategory,
   CardHeading,
@@ -10,17 +10,18 @@ const CardOneThird = ({
 }) => {
   console.log(props);
   const style = {
-    CardOneThird: css`
+    CardTwoThirds: css`
       background-color: white;
       margin: 10px;
       border-radius: 10px;
       display: grid;
+      grid-column: 2 / 4;
     `,
   };
 
   return (
     <>
-      <article css={style.CardOneThird}>
+      <article css={style.CardTwoThirds}>
         {CardImage}
         {CardCategory}
         {CardHeading}
@@ -30,4 +31,4 @@ const CardOneThird = ({
   );
 };
 
-export default CardOneThird;
+export default CardTwoThirds;

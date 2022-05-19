@@ -4,9 +4,11 @@ import { css } from "@emotion/react";
 const CardCategory = (props) => {
   const styles = {
     CardCategory: css`
-      color: ${props.CardCategoryColor || "black"};
-      background-color: ${props.CardBackgroundColor || "unset"};
-      font-size: ${props.CardCategoryFontsize || "medium"};
+      color: ${props.color || "black"};
+      font-size: ${props.fontsize || "initial"};
+      font-weight: ${props.fontweight || "initial"};
+      background-color: ${props.backgroundcolor || "unset"};
+      margin: ${props.margin || 0};
     `,
   };
   return (

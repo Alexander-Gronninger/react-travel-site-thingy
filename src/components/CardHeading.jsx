@@ -2,15 +2,18 @@
 import { css } from "@emotion/react";
 
 const CardHeading = (props) => {
-  const stlyes = {
+  console.log(props);
+  const styles = {
     CardHeading: css`
-      ${props.CardHeadingFontSize || "20"}
-      ${props.CardHeadingColor || "black"}
+      color: ${props.color || "black"};
+      font-size: ${props.fontsize || "initial"};
+      font-weight: ${props.fontweight || "initial"};
+      margin: ${props.margin || 0};
     `,
   };
   return (
     <>
-      <h2 css={stlyes.CardHeading}>{props.CardHeadingContent}</h2>
+      <h2 css={styles.CardHeading}>{props.CardHeadingContent}</h2>
     </>
   );
 };
