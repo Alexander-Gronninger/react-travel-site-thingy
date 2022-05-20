@@ -16,23 +16,35 @@ const ResponsiveCarousel = (props) => {
       grid-template-columns: ${props.gridtemplatecolumns || "auto"};
       grid-template-rows: ${props.gridtemplaterows || "auto"};
     `,
+    Test: css`
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    `,
   };
   return (
-    <Carousel showArrows={props.showArrows}>
-      {props.images.forEach((image) => {
+    <>
+      <div style={style.Test}>
+        <Carousel showArrows={true}>
+          <div>
+            <img src="../src/images/foggy_forest_road.jpg" alt="" />
+          </div>
+          <div>
+            <img src="../src/images/foggy_sea.jpg" alt="" />
+          </div>
+          <div>
+            <img src="../src/images/rails.jpg" alt="" />
+          </div>
+          {/* 
+        {props.images.forEach((image) => {
         <div>
           <img src={image} alt="" />
         </div>;
-      })}
-    </Carousel>
+      })} */}
+        </Carousel>
+      </div>
+    </>
   );
 };
 
-export default ResponsiveCarousel; /* 
-
-const ResponsiveCarousel = React.createClass({
-  render(props) {
-    console.log(props);
-    return <Carousel showArrows={true}></Carousel>;
-  },
-}); */
+export default ResponsiveCarousel;

@@ -15,6 +15,8 @@ const Card = (props) => {
     `,
   };
 
+  console.log(props.CardImage);
+
   return (
     <>
       <article css={style.Card}>
