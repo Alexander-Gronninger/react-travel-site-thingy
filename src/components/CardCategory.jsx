@@ -9,6 +9,8 @@ const CardCategory = (props) => {
       font-weight: ${props.fontweight || "initial"};
       background-color: ${props.backgroundcolor || "unset"};
       margin: ${props.margin || 0};
+      grid-column: ${props.gridcolumn || "auto"};
+      grid-row: ${props.gridrow || "auto"};
     `,
   };
   return (

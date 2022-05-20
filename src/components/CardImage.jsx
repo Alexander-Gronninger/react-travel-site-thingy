@@ -8,9 +8,11 @@ const CardImage = (props) => {
       width: ${props.width || "auto"};
       border-radius: ${props.borderradius || "auto"};
       margin: ${props.margin || 0};
+      display: ${props.display || "block"};
+      grid-column: ${props.gridcolumn || "auto"};
+      grid-row: ${props.gridrow || "auto"};
     `,
   };
-  console.log(props);
   return (
     <>
       <img
